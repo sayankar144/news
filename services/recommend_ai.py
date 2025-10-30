@@ -3,7 +3,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 from services.db_manager import get_articles, get_user
 
-model = SentenceTransformer('all-MiniLM-L6-v2')
+model = SentenceTransformer('paraphrase-MiniLM-L3-v2')
 
 def get_article_embeddings(articles):
     texts = [f"{a.get('title', '')} {a.get('description', '')}" for a in articles]
